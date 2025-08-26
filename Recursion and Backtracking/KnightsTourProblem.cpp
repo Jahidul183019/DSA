@@ -1,3 +1,6 @@
+// Leetcode 2596
+// Time Complexity : O(8^n*n)
+// Space Complexity : O(n*n)
 #include <iostream>
 #include <vector>
 using namespace std;
