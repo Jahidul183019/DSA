@@ -3,6 +3,10 @@
 #include <unordered_map>
 using namespace std;
 
+//Leetcode 560
+//Prefix Sum
+//TC : O(n)
+//SC : O(n)
 class Solution {
 public:
     int subarraySum(vector<int>& arr, int k) {
