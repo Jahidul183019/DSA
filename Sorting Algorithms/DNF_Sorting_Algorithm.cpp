@@ -1,3 +1,5 @@
+//Leetcode 75
+
 // Brute Force Approach: Sort(nums.begin(),nums.end());  O(nlogn)
 
 
@@ -30,24 +32,48 @@ class Solution {
       }
   };    */
 
-                       /*  Dutch National Flag Algorithm
-  class Solution {
-    public:
-        void sortColors(vector<int>& nums) {//O(n)
-            int n=nums.size();
-            int low=0,mid=0,high=n-1;
-    
-            while(mid<=high){
-                if(nums[mid]==0){
-                    swap(nums[mid],nums[low]);
-                    mid++;
-                    low++;
-                }else if(nums[mid]==1){
-                    mid++;
-                }else{//2
-                    swap(nums[mid],nums[high]);
-                    high--;
-                }
+                       
+#include <iostream>
+#include <vector>
+using namespace std;
+
+/*  Dutch National Flag Algorithm */
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {//O(n)
+        int n=nums.size();
+        int low=0,mid=0,high=n-1;
+
+        while(mid<=high){
+            if(nums[mid]==0){
+                swap(nums[mid],nums[low]);
+                mid++;
+                low++;
+            }else if(nums[mid]==1){
+                mid++;
+            }else{//2
+                swap(nums[mid],nums[high]);
+                high--;
             }
         }
-    };    */
+    }
+};
+
+int main() {
+    Solution sol;
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    vector<int> nums(n);
+    cout << "Enter elements (0,1,2 only): ";
+    for(int i=0;i<n;i++) cin >> nums[i];
+
+    sol.sortColors(nums);
+
+    cout << "Sorted Colors: ";
+    for(int x: nums) cout << x << " ";
+    cout << endl;
+
+    return 0;
+}
