@@ -36,7 +36,7 @@ int getCelebrity(vector<vector<int>>arr){
   int celeb = s.top();
 
   for(int i=0;i<n;i++){
-    if(i!=celeb && arr[i][celeb]==0 || arr[celeb][i]==1){
+    if(i!=celeb && (arr[i][celeb]==0 || arr[celeb][i]==1)){
         return -1;
     }
   }
