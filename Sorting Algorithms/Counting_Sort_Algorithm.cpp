@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void CountSort(int arr[],int n){
+void CountSort(int arr[],int n){ // TC & SC : O(n)
     int k=arr[0];
 
     for(int i=0;i<n;i++){
