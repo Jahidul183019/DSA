@@ -10,23 +10,6 @@ This repository is my personal collection for building and practicing Data Struc
 
 All code is in C++, organized by topic for easy navigation.
 
-📂 Repository Structure
-DSA/
-├── Arrays/
-├── 2D Arrays/
-├── Strings/
-├── Sorting Algorithms/
-├── Searching / Binary Search/
-├── Greedy/
-├── Recursion & Backtracking/
-├── Linked List/
-├── Queue/
-├── Stack/
-├── Hashing/
-├── Number Theory/
-├── STL/
-└── … other topics …
-
 
 Each folder contains modular, well-commented .cpp files with input/output examples. File names hint at the problem or approach (e.g. two_sum.cpp).
 
