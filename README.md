@@ -50,12 +50,18 @@ Recursion & Backtracking
 
 Linked List
 
-Queue / Stack
+Queue
+
+Stack
 
 Hashing
 
 Number Theory
 
 STL (C++ Standard Template Library)
+
+Two Pointer Approach
+
+Binary Tree
 
 Future topics: Graph Algorithms, Dynamic Programming, Segment Trees, Range Queries, and more.
