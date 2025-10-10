@@ -18,6 +18,7 @@ Each folder contains modular, well-commented .cpp files with input/output exampl
 Clone the repo:
 
 git clone https://github.com/Jahidul183019/DSA.git
+
 cd DSA
 
 
@@ -29,6 +30,7 @@ cd "Sorting Algorithms"
 Compile and run:
 
 g++ -std=c++17 filename.cpp -o output
+
 ./output
 
 
