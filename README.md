@@ -1,4 +1,4 @@
-DSA - Data Structures & Algorithms in C++
+# DSA - Data Structures & Algorithms in C++
 
 This repository is my personal collection for building and practicing Data Structures and Algorithms (DSA) in C++. It serves as:
 
@@ -13,28 +13,28 @@ All code is in C++, organized by topic for easy navigation.
 
 Each folder contains modular, well-commented .cpp files with input/output examples. File names hint at the problem or approach (e.g. two_sum.cpp).
 
-⚙ How to Use
+# ⚙ How to Use
 
 Clone the repo:
-
+```bash
 git clone https://github.com/Jahidul183019/DSA.git
 
 cd DSA
-
+```
 
 Navigate to the topic folder:
-
+```bash
 cd "Sorting Algorithms"
 
-
+```
 Compile and run:
-
+```bash
 g++ -std=c++17 filename.cpp -o output
 
 ./output
+```
 
-
-🧠 Topics Covered
+# 🧠 Topics Covered
 
 Arrays
 
