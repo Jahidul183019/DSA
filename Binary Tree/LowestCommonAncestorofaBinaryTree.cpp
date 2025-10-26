@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {//TC:O(n)
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {//TC & SC:O(n)
         if(root==NULL){
             return NULL;
         }
