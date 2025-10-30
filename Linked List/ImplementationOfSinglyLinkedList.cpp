@@ -69,6 +69,12 @@ class List{
 			return;
 		}
 
+		if(head == tail){ // Only one node
+        delete head;
+        head = tail = NULL;
+        return;
+       }
+		
 		Node* temp=head;
 		
 		while(temp->next!=tail){
