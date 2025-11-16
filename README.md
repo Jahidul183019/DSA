@@ -68,4 +68,6 @@ Binary Tree
 
 Binary Search Tree (BST)
 
+Graph
+
 Future topics: Graph Algorithms, Dynamic Programming, Segment Trees, Range Queries, and more.
