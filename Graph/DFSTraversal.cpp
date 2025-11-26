@@ -62,6 +62,20 @@ class Graph{
         dfsHelper(src,vis);
         cout<<endl;
     }
+
+    //For Disconnected Graph
+    /* 
+    void dfs() {
+    vector<bool> vis(V, false);
+
+    for (int i = 0; i < V; i++) {
+        if (!vis[i]) {
+            dfsHelper(i, vis);
+        }
+    }
+    cout << endl;
+} */
+
 };
 
 int main(){
