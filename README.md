@@ -68,7 +68,7 @@ Binary Tree
 
 Binary Search Tree (BST)
 
-Heap
+Binary Heap
 
 Graph
 
