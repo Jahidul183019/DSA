@@ -5,7 +5,7 @@ using namespace std;
 
 vector<int>parent,rankArr;
 
-void makeSet(int n){
+void makeSet(int n){ // TC : O(n)
     parent.resize(n+1,-1);
     rankArr.resize(n+1,0);
 
@@ -14,14 +14,14 @@ void makeSet(int n){
     }
 }
 
-int findSet(int x){
+int findSet(int x){ // TC : O(1))
     if(parent[x]!=x){
         parent[x]=findSet(parent[x]); // Path Compression
     }
     return parent[x];
 }
 
-void unionSet(int a,int b){
+void unionSet(int a,int b){ // TC : O(1))
     int rootA=findSet(a);
     int rootB=findSet(b);
 
