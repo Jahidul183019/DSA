@@ -72,4 +72,8 @@ Binary Heap
 
 Graph
 
+AVL Tree
+
+Disjoint Set Union
+
 Future topics : Dynamic Programming, Segment Trees, Range Queries, and more.
