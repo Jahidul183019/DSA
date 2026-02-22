@@ -19,7 +19,7 @@ class Graph{
             l[u].push_back(v); //only directed edges
         }
 
-        void topoSort(){
+        void topoSort(){ // Time Complexity : O(V+E)
             vector<int>res;
 
             //Calculate indegree
@@ -74,4 +74,6 @@ int main(){
     g.addEdge(5,2);
 
     g.topoSort();
+
+    return 0;
 }
