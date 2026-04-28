@@ -20,7 +20,7 @@ class Graph{
     }
 
     //cycle detection
-    bool isCycleDirDFS(int curr,vector<bool>&vis,vector<bool>recPath){
+    bool isCycleDirDFS(int curr,vector<bool>&vis,vector<bool>&recPath){
         vis[curr]=true;
         recPath[curr]=true;
 
