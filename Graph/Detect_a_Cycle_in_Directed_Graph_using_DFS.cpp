@@ -29,11 +29,11 @@ class Graph{
                 if(isCycleDirDFS(v,vis,recPath)){
                     return true;
                 }
-            }else if(recPath[curr]){
+            }else if(recPath[v]){
                     return true;
                 }
         }
-        recPath[v]=false;
+        recPath[curr]=false;
         return false;
     }
 
