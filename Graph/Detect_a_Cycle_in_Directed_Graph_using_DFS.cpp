@@ -33,7 +33,7 @@ class Graph{
                     return true;
                 }
         }
-        recPath[curr]=false;
+        recPath[v]=false;
         return false;
     }
 
