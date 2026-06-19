@@ -76,4 +76,6 @@ AVL Tree
 
 Disjoint Set Union
 
-Future topics : Dynamic Programming, Segment Trees, Range Queries, and more.
+Dynamic Programming
+
+Future topics : Segment Trees, Range Queries, and more.
