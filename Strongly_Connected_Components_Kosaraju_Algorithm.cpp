@@ -44,7 +44,7 @@ class Graph{
     }
 
     void kosarajuSCC(){
-        //step 1 - topo order
+        //step 1 - topo order => O(V+E)
         stack<int>s;
 
         vector<bool>vis(V,false);
@@ -55,7 +55,7 @@ class Graph{
             }
         }
 
-        //step 2 - transpose graph
+        //step 2 - transpose graph => O(V+E)
         vector<vector<int>>transpose(V);
 
         for(int u=0;u<V;u++){// u --> v
