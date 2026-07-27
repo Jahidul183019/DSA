@@ -30,8 +30,6 @@ public:
 class Solution {
 public:
   int solve(vector<int> &nums, int i, vector<int> &dp) {
-    int n = nums.size();
-
     // No house left
     if (i < 0) {
       return 0;
