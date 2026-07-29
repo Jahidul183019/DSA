@@ -3,56 +3,50 @@
 #include <algorithm>
 using namespace std;
 
+static bool compare(vector<int>&a,vector<int>&b){
+    double a1=(1.0*a[0])/a[1];
+    double b1=(1.0*b[0])/b[1];
 
-class Item{
-public:
-    int value;
-    int weight;
-
-    Item(int v,int w){
-        value=v;
-        weight=w;
-    }
-};
-
-bool compare(Item a, Item b) {
-    return (double)a.value / a.weight > (double)b.value / b.weight;
+    return a1>b1;
 }
 
-double fractionalKnapsack(vector<Item> &items, int capacity){
-    sort(items.begin(),items.end(),compare);
+double fractionalKnapsack(vector<vector<int>>&items,int K){
+   sort(items.begin(),items.end(),compare);
 
-    double totalProfit=0;
+   int maxVal=0;
 
-    for(int i=0;i<items.size();i++){
-        if(capacity>=items[i].weight){
-            totalProfit+=items[i].value;
-            capacity-=items[i].weight;
-        }
-        else{
-            totalProfit+=((double)items[i].value / items[i].weight) * capacity;
+   for(auto& item : items){
+        int val=item[0];
+        int wt=item[1];
+
+        if(wt<=K){
+            maxVal+=val;
+            K-=wt;
+        }else{
+            maxVal+=((double)val/wt)*K;
             break;
         }
-    }
-    return totalProfit;
+   }
+   return maxVal;
 }
-int main(){
-    int n,capacity;
 
-    cin>>n>>capacity;
+int main() {
+    int n, K;
 
-    vector<Item>items;
+    cin >> n >> K;
 
-    for(int i=0;i<n;i++){
-        int v,w;
-        cin>>v>>w;
+    vector<vector<int>> items;
 
-        items.push_back(Item(v,w));
+    for (int i = 0; i < n; i++) {
+        int v, w;
+        cin >> v >> w;
+
+        items.push_back({v, w});   // {value, weight}
     }
 
-    double result = fractionalKnapsack(items, capacity);
+    double result = fractionalKnapsack(items, K);
 
-    cout<<"Maximum Profit : "<< result << endl;
-    
+    cout << "Maximum Profit : " << result << endl;
+
     return 0;
 }
