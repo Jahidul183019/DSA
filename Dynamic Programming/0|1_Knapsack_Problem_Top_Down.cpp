@@ -1,50 +1,92 @@
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-vector<int> value, weight;
-vector<vector<int>> dp;
-int n;
+// Recursive Approach : TC O(2^n)
 
-int knap(int i, int rem)
-{
-    if (i == n || rem <= 0)
-        return 0;
+double knapsack01_Rec(vector<vector<int>>&items,int W,int n){
+    if(n==0 || W==0) return 0;
 
-    if (dp[i][rem] != -1)
-        return dp[i][rem];
+    int val=items[n-1][0];
+    int wt=items[n-1][1];
 
-    int taken = 0;
-    int notTaken = 0;
+    if(wt<=W){
+        int include= val + knapsack01_Rec(items,W-wt,n-1);
 
-    if (weight[i] <= rem)
-        taken = value[i] + knap(i + 1, rem - weight[i]);
+        int exclude=knapsack01_Rec(items,W,n-1);
 
-    notTaken = knap(i + 1, rem);
+        return max(include,exclude);
 
-    dp[i][rem] = max(taken, notTaken);
-
-    return dp[i][rem];
+    }else{
+        return knapsack01_Rec(items,W,n-1);
+    }
 }
 
-int main()
-{
-    int capacity;
+//Memorization DP : TC (n*W)
 
-    cin >> n >> capacity;
+double knapsack01_MemoDP(vector<vector<int>>&items,int W,int n,vector<vector<int>>&dp){
+    if(n==0 || W==0) return 0;
 
-    value.resize(n);
-    weight.resize(n);
+    if(dp[n][W]!=-1) return dp[n][W];
 
-    for (int i = 0; i < n; i++)
-        cin >> value[i];
+    int val=items[n-1][0];
+    int wt=items[n-1][1];
 
-    for (int i = 0; i < n; i++)
-        cin >> weight[i];
+    if(wt<=W){
+        int include= val + knapsack01_MemoDP(items,W-wt,n-1,dp);
 
-    dp.assign(n + 1, vector<int>(capacity + 1, -1));
+        int exclude=knapsack01_MemoDP(items,W,n-1,dp);
 
-    cout << "Maximum Profit = " << knap(0, capacity) << endl;
+        return dp[n][W]= max(include,exclude);
+
+    }else{
+        return dp[n][W]= knapsack01_MemoDP(items,W,n-1,dp);
+    }
+}
+
+//Tabulation DP : TC (n*W)
+
+double knapsack01_TabDP(vector<vector<int>>&items,int W,int n){
+    vector<vector<int>>dp(n+1,vector<int>(W+1,0));
+
+    for(int i=1;i<=n;i++){// i items
+        for(int j=1;j<=W;j++){// j knapsack capacity
+            int val=items[i-1][0];
+            int wt=items[i-1][1];
+
+            if(wt<=j){
+                dp[i][j]=max(val+dp[i-1][j-wt],dp[i-1][j]);
+            }else{
+                dp[i][j]=dp[i-1][j];
+            }
+        }
+    }
+    return dp[n][W];
+}
+
+int main() {
+    int n, W;
+
+    cin >> n >> W;
+
+    vector<vector<int>> items;
+
+    for (int i = 0; i < n; i++) {
+        int v, w;
+        cin >> v >> w;
+
+        items.push_back({v, w});   // {value, weight}
+    }
+
+
+    // cout<< knapsack01_Rec(items,W,n) << endl;
+
+    // vector<vector<int>>dp(n+1,vector<int>(W+1,-1));
+
+    // cout<<knapsack01_MemoDP(items,W,n,dp)<<endl;
+
+    cout<<knapsack01_TabDP(items,W,n);
 
     return 0;
 }
