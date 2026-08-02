@@ -17,9 +17,9 @@ int partition(vector<int> &arr, int st, int end){
     return idx;
 }
 
-void quickSort(vector<int> &arr , int st ,int end){// Avg TC    : O(n^2)
-                                                   // Worst TC  : O(n^2)
-                                                   // Space Complexity : O(1)
+void quickSort(vector<int> &arr , int st ,int end){// Best TC   : O(n log n)
+                                                  // Average TC: O(n log n)
+                                                // Worst TC  : O(n^2)
     if(st<end){
         int pivIdx = partition(arr, st, end);
         
