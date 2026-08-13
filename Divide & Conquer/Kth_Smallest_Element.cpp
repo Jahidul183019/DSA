@@ -23,7 +23,7 @@ int quickSelect(vector<int> &arr , int st ,int end,int k){
         return arr[st];
     }
 
-    if(st<end){
+    if(st<=end){
         int pivIdx = partition(arr, st, end);
         
         if(pivIdx==k) return arr[pivIdx];
