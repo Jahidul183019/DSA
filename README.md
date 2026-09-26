@@ -1,17 +1,45 @@
 # Data Structures & Algorithms in C++
 
-A personal collection of data structure implementations and algorithmic problem solutions, organized by topic. Built for learning, interview preparation, competitive programming practice, and revisiting core DSA concepts.
+![Language: C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?logo=cplusplus&logoColor=white)
+![Build examples: C++17](https://img.shields.io/badge/Build_examples-C%2B%2B17-00599C)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Jahidul183019%2FDSA-181717?logo=github)](https://github.com/Jahidul183019/DSA)
+
+**Implement the fundamentals. Understand the patterns. Practice problem solving.**
+
+My personal collection of data structure implementations and algorithmic problem solutions in C++, organized by topic. This repository documents my DSA practice and serves as a reference for revision, interview preparation, and competitive programming.
 
 The repository covers foundational structures, common problem-solving patterns, and advanced topics such as graph algorithms and dynamic programming. Some files compare multiple approaches, including recursion, memoization, tabulation, and space optimization.
 
 ## Contents
 
+- [Repository structure](#repository-structure)
 - [Topic index](#topic-index)
 - [Getting started](#getting-started)
 - [Working with solutions](#working-with-solutions)
 - [Suggested learning path](#suggested-learning-path)
-- [Contributing](#contributing)
 - [Roadmap](#roadmap)
+
+## Repository structure
+
+Solutions live in topic folders at the repository root. A few examples:
+
+```text
+DSA/
+├── Arrays/
+│   └── product_of_array_except_self.cpp
+├── Sorting Algorithms/
+│   └── Quick_Sort_Algorithm.cpp
+├── Linked List/
+│   └── ReverseLinkedList.cpp
+├── Graph/
+│   ├── BFSTraversal.cpp
+│   └── DFSTraversal.cpp
+├── Dynamic Programming/
+│   ├── House_Robber.cpp
+│   └── Longest_Common_Subsequence.cpp
+├── … other topic folders listed below
+└── README.md
+```
 
 ## Topic index
 
@@ -98,16 +126,6 @@ Folder and file names may contain spaces or special characters. Quote paths when
 5. **Compare optimization strategies:** Practice greedy algorithms and dynamic programming; understand why each approach works.
 
 For each problem, identify the constraints, write a straightforward solution, analyze its complexity, and test edge cases before optimizing.
-
-## Contributing
-
-Corrections, clearer explanations, and additional solutions are welcome.
-
-1. Add or update a `.cpp` file in the appropriate topic folder.
-2. Use a descriptive filename and include a problem reference when available.
-3. Explain the approach, assumptions, and time/space complexity in comments.
-4. Verify the solution with representative inputs and edge cases. State whether it is a standalone program or a judge snippet.
-5. Open a pull request describing the change and how it was checked.
 
 ## Roadmap
 
